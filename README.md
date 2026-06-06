@@ -1,73 +1,38 @@
-# React + TypeScript + Vite
+# Macanudo Travel
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web de Macanudo Travel, una experiencia digital para presentar destinos, inspirar viajes personalizados y facilitar el primer contacto con viajeros interesados.
 
-Currently, two official plugins are available:
+El proyecto está construido como una aplicación frontend con React, TypeScript, Vite y Tailwind CSS. La interfaz combina una landing con secciones de pantalla completa, navegación bilingüe, carruseles de destinos y páginas internas para explorar lugares destacados.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Características principales
 
-## React Compiler
+- Landing principal con hero, mensaje de marca, destinos y footer.
+- Navegación superior con selector de idioma español/inglés.
+- Carrusel de destinos usando Embla Carousel.
+- Página interna de Honduras con slider de lugares destacados.
+- Página "Empieza a Planear" con formulario visual en dos pasos.
+- Página "Quiénes Somos" preparada para historia, equipo, motivación y contacto.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 4
+- React Router
+- i18next / react-i18next
+- Embla Carousel
+- Motion
+- Lucide React
+- React Icons
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Rutas principales
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- `/` muestra la landing con inicio, declaración de viaje, destinos y footer.
+- `/whoweare` muestra la página institucional.
+- `/destinations/honduras` muestra la página de Honduras.
+- `/startplanning` muestra el formulario de planificación.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Los demás destinos ya están listados en el carrusel, pero sus páginas internas todavía están pendientes de implementación.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
