@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=EB+Garamond:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+    --font-inter: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-garamond: "EB Garamond", ui-serif, Georgia, serif;
+    
+    --color-brand-blue: #2563eb;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
