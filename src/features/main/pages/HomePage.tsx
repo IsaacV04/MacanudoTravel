@@ -1,34 +1,11 @@
 import { Search } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export const HomePage = () => {
 
   const { t } = useTranslation();
   const [destination, setDestination] = useState("");
-
-  const API_URL = "https://script.google.com/macros/s/AKfycbx4l-HCgKqZ0P66lC8z9md5VqVWhfzkpekRc4-Pnyr8gyMl_WTn2lZhX42wGz2xzj3P/exec";
-
-//   async function getUsuarios() {
-//   const response = await fetch(API_URL);
-//   const result = await response.json();
-//   console.log(result.data); // Aquí están tus filas de la hoja de cálculo
-// }
-
-const getData = async () => {
-  try {
-    const res = await fetch(API_URL);
-    const data = await res.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-    
-  }
-};
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   return (
     <main className="min-h-screen pt-24 flex items-center justify-center px-4">
